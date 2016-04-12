@@ -220,7 +220,7 @@ public class Chat extends JFrame
 } //end Chat class
   
   //Prompt Class 
-class ClientPrompt extends JFrame {
+class ClientPrompt extends JFrame implements ActionListener{
   
     //attributes
    private JPanel jpNorth, jpCenter, jpSouth; 
@@ -259,7 +259,7 @@ class ClientPrompt extends JFrame {
                }//end actionPerformed
             }//end ActionListener
          );//end Submit Action Listener 
-        
+       
       jpNorth = new JPanel(); 
       jpCenter = new JPanel(); 
       jpSouth = new JPanel(); 
@@ -287,7 +287,19 @@ class ClientPrompt extends JFrame {
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       setVisible(true);     
    } // end Client Prompt constructor 
-     
+      public void actionPerformed(ActionEvent ae){
+      
+      String select = ""; 
+      
+      if(jrTCP.isSelected())
+        {
+          select = jrTCP.getText(); 
+        }
+      else if(jrUDP.isSelected())
+        {
+         select = jrUDP.getText(); 
+        }
+     }//end actionPerformed method
   
 } // end Prompt Prompt class
 
