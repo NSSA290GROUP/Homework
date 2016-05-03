@@ -14,24 +14,24 @@ public class ServerGUI extends JFrame
       
       try{
          jpInfo.add(new JLabel("IP Address: "+ InetAddress.getLocalHost()));
-         jpInfo.add(jtfIP = new JTextField(15));
-         jtfIP.setEditable(false);
+         //jpInfo.add(jtfIP = new JTextField(15));
+         //jtfIP.setEditable(false);
       } catch(UnknownHostException uhe){
          System.out.println("Server can't get its own IP address, gg.");
       }
       
       jpInfo.add(new JLabel("TCP/IP Port Number: 16789"));
-      jpInfo.add(jtfTCPport = new JTextField(15));
-      jtfTCPport.setEditable(false);
+      //jpInfo.add(jtfTCPport = new JTextField(15));
+      //jtfTCPport.setEditable(false);
       
       jpInfo.add(new JLabel("UDP Port Number: 16789"));
-      jpInfo.add(jtfUDPport = new JTextField(15));
-      jtfUDPport.setEditable(false);
+      //jpInfo.add(jtfUDPport = new JTextField(15));
+      //jtfUDPport.setEditable(false);
       
       add(jpInfo, BorderLayout.CENTER);
       
       setTitle("Server Information");
-      pack();
+      setSize(300,100);
       setLocation(20,20);
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       setVisible(true);

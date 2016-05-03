@@ -174,7 +174,7 @@ public class Chat extends JFrame
       
       }
       catch (UnknownHostException uhe){
-         jtaMsgReceived.setText("Unable to conect the host"); 
+         jtaMsgReceived.setText("Unable to connect the host"); 
          return;
       }
       catch (IOException ioe){
